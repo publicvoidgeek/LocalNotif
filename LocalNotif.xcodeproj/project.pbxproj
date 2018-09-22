@@ -22,6 +22,7 @@
 		9B55362F2156297600CBFF55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B5536322156297600CBFF55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B5536342156297600CBFF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B55363A21562B1D00CBFF55 /* LocalNotif.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocalNotif.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		9B5536272156297400CBFF55 /* LocalNotif */ = {
 			isa = PBXGroup;
 			children = (
+				9B55363A21562B1D00CBFF55 /* LocalNotif.entitlements */,
 				9B5536282156297400CBFF55 /* AppDelegate.swift */,
 				9B55362A2156297400CBFF55 /* ViewController.swift */,
 				9B55362C2156297400CBFF55 /* Main.storyboard */,
@@ -96,6 +98,14 @@
 				TargetAttributes = {
 					9B5536242156297400CBFF55 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -282,7 +292,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LocalNotif/LocalNotif.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VC89CM487H;
 				INFOPLIST_FILE = LocalNotif/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,7 +311,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LocalNotif/LocalNotif.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VC89CM487H;
 				INFOPLIST_FILE = LocalNotif/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
